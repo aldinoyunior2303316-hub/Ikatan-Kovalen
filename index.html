@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ikatan Kovalen – Kimia Kelas 10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F7FF;--card:#fff;--ink:#1F2340;--mute:#575c7a;--coral:#FF6B6B;--sun:#FFC93C;--teal:#17B3A3;--vio:#7C5CFF;--coral-t:#FFE3E3;--sun-t:#FFF2CC;--teal-t:#D5F5F1;--vio-t:#E6E0FF;--line:#dfe5f5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15172b;--card:#1f2240;--ink:#f0f2ff;--mute:#aeb3d6;--coral:#ff8585;--sun:#ffd666;--teal:#3cd0c0;--vio:#a18cff;--coral-t:#46283a;--sun-t:#45402a;--teal-t:#1d3d44;--vio-t:#322d63;--line:#343868;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15172b;--card:#1f2240;--ink:#f0f2ff;--mute:#aeb3d6;--coral:#ff8585;--sun:#ffd666;--teal:#3cd0c0;--vio:#a18cff;--coral-t:#46283a;--sun-t:#45402a;--teal-t:#1d3d44;--vio-t:#322d63;--line:#343868;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.7 Nunito,system-ui,sans-serif}
+h1,h2,h3{font-family:"Baloo 2",Nunito,system-ui,sans-serif;line-height:1.15;margin:0 0 .5rem}
+h2{font-size:clamp(1.7rem,4vw,2.3rem)}h3{font-size:1.25rem}
+p{margin:.4rem 0 .8rem;max-width:68ch}
+.wrap{max-width:980px;margin:0 auto;padding:0 1.1rem}
+section{padding:2.6rem 0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:2px solid var(--line)}
+nav .wrap{display:flex;gap:.5rem;overflow-x:auto;padding-top:.6rem;padding-bottom:.6rem}
+nav a{white-space:nowrap;text-decoration:none;color:var(--ink);font-weight:800;font-size:.92rem;padding:.35rem .9rem;border-radius:99px;background:var(--card);border:2px solid var(--line)}
+nav a:hover,nav a:focus-visible{border-color:var(--vio);outline:none}
+.hero{background:var(--vio);color:#fff;padding:3rem 0 3.4rem;border-radius:0 0 48px 48px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem;align-items:center}
+.hero h1{font-size:clamp(2.3rem,7vw,3.9rem);font-weight:800}
+.hero p{font-size:1.15rem}
+.hero .pill{display:inline-block;background:var(--sun);color:#1F2340;font-weight:800;border-radius:99px;padding:.2rem .9rem;margin-bottom:.8rem;font-size:.95rem}
+.goals{background:var(--card);border-radius:20px;padding:1rem 1.2rem;margin-top:1rem;color:var(--ink)}
+.goals h3{margin:0 0 .2rem;font-size:1.05rem}.goals ul{margin:0;padding-left:1.2rem}
+.card{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:1.3rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.tag{display:inline-block;font-weight:800;border-radius:12px;padding:.1rem .7rem;margin-bottom:.4rem}
+.t-coral{background:var(--coral-t)}.t-sun{background:var(--sun-t)}.t-teal{background:var(--teal-t)}.t-vio{background:var(--vio-t)}
+.b-coral{border-color:var(--coral)}.b-teal{border-color:var(--teal)}.b-vio{border-color:var(--vio)}.b-sun{border-color:var(--sun)}
+.formula{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:.03em}
+.note{background:var(--sun-t);border-left:8px solid var(--sun);border-radius:14px;padding:.7rem 1rem;margin:1rem 0}
+.steps{counter-reset:s;display:grid;gap:.8rem;padding:0;list-style:none;margin:1rem 0}
+.steps li{counter-increment:s;background:var(--card);border:2px solid var(--line);border-radius:20px;padding:.9rem 1rem .9rem 4rem;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:1rem;top:.8rem;width:2.3rem;height:2.3rem;border-radius:50%;background:var(--teal);color:#12202a;font:800 1.2rem "Baloo 2",sans-serif;display:grid;place-items:center}
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.tabs button{font:800 1rem Nunito,sans-serif;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:99px;padding:.45rem 1.1rem;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--coral);border-color:var(--coral);color:#1F2340}
+.tabs button:focus-visible,.opt:focus-visible{outline:3px solid var(--vio);outline-offset:2px}
+.panel[hidden]{display:none}
+.bondline{font:800 2.2rem "Baloo 2",sans-serif;color:var(--vio)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:520px;background:var(--card);border-radius:16px;overflow:hidden}
+th,td{padding:.6rem .8rem;text-align:left;border-bottom:2px solid var(--line);vertical-align:top}
+th{background:var(--vio-t)}
+.pre{display:flex;flex-wrap:wrap;gap:.5rem}.pre span{background:var(--teal-t);border-radius:12px;padding:.2rem .7rem;font-weight:800}
+.q{margin:1rem 0;padding:1.1rem}
+.opt{display:block;width:100%;text-align:left;margin:.4rem 0;padding:.55rem .9rem;font:600 1rem Nunito,sans-serif;color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:14px;cursor:pointer}
+.opt.ok{background:var(--teal-t);border-color:var(--teal)}.opt.no{background:var(--coral-t);border-color:var(--coral)}
+.fb{font-weight:600;margin:.3rem 0 0;min-height:1.5em}
+.score{font:800 1.4rem "Baloo 2",sans-serif}
+footer{text-align:center;color:var(--mute);padding:2rem 1rem 3rem}
+svg text{font-family:"Baloo 2",sans-serif;font-weight:800}
+.tabs button[aria-pressed="true"]{background:var(--coral);border-color:var(--coral);color:#1F2340}
+#lwfig svg{width:100%;height:auto;display:block;background:var(--bg);border-radius:20px}
+#lwinfo p{margin:.3rem 0}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem;margin-top:.8rem}.cmp figure{margin:0}.cmp figcaption{font-weight:800;font-size:.92rem;text-align:center;margin-top:.3rem}.cmp svg{width:100%;height:auto;display:block;background:var(--bg);border-radius:16px}
+@media (max-width:700px){.hero .wrap,.grid2{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="wrap">
+<div>
+<span class="pill">Kimia Kelas 10 · Ikatan Kimia</span>
+<h1>Ikatan Kovalen: atom yang suka berbagi</h1>
+<p>Bagaimana dua atom saling meminjamkan elektron supaya sama-sama stabil? Mari kita cari tahu langkah demi langkah.</p>
+<div class="goals"><h3>Disusun Oleh: Aldino Yunior</h3><p style="margin:0">Guru Pamong: Dasianto, S.Pd</p></div>
+</div>
+<svg viewBox="0 0 300 220" role="img" aria-label="Dua atom hidrogen berbagi sepasang elektron">
+<circle cx="115" cy="110" r="78" fill="#FFC93C" opacity=".95"/><circle cx="185" cy="110" r="78" fill="#FF6B6B" opacity=".8"/>
+<circle cx="150" cy="95" r="9" fill="#1F2340"/><circle cx="150" cy="125" r="9" fill="#1F2340"/>
+<text x="80" y="122" font-size="40" fill="#1F2340">H</text><text x="198" y="122" font-size="40" fill="#1F2340">H</text>
+<text x="150" y="212" font-size="18" fill="#fff" text-anchor="middle">sepasang elektron dipakai bersama</text>
+</svg>
+</div>
+</header>
+
+<nav aria-label="Daftar bab"><div class="wrap">
+<a href="#jenis">1. Jenis ikatan</a><a href="#bentuk">2. Pembentukan</a><a href="#oktet">3. Duplet &amp; oktet</a><a href="#tipe">4. Jenis kovalen</a><a href="#nama">5. Rumus &amp; nama</a><a href="#sifat">6. Sifat</a><a href="#kuis">7. Kuis</a>
+</div></nav>
+
+<main class="wrap">
+<section id="jenis">
+<h2>1. Dua cara atom menjadi stabil</h2>
+<p>Atom stabil kalau kulit terluarnya penuh: <b>8 elektron (oktet)</b>, atau <b>2 elektron (duplet)</b> untuk H dan He. Atom bisa mencapainya dengan dua cara.</p>
+<div class="grid2">
+<div class="card b-coral"><span class="tag t-coral">Ikatan ionik</span>
+<h3>Serah-terima elektron</h3>
+<p>Terjadi antara <b>logam</b> dan <b>nonlogam</b>. Contoh: <b>NaCl</b> (garam dapur).</p>
+<svg viewBox="0 0 300 100" role="img" aria-label="Na melepas elektron ke Cl membentuk Na+ dan Cl-"><circle cx="50" cy="50" r="34" fill="#FFC93C"/><text x="50" y="62" font-size="30" text-anchor="middle" fill="#1F2340">Na</text><circle cx="150" cy="50" r="9" fill="#FF6B6B"/><path d="M95 50h40" stroke="#FF6B6B" stroke-width="4" stroke-dasharray="6 5"/><circle cx="250" cy="50" r="38" fill="#17B3A3"/><text x="250" y="62" font-size="30" text-anchor="middle" fill="#1F2340">Cl</text></svg>
+<p>Na (1s² 2s² 2p⁶ 3s¹) melepas 1 elektron menjadi <b>Na⁺</b>. Cl (1s² 2s² 2p⁶ 3s² 3p⁵) menerima 1 elektron menjadi <b>Cl⁻</b>. Kedua ion berlawanan muatan saling tarik.</p></div>
+<div class="card b-teal"><span class="tag t-teal">Ikatan kovalen</span>
+<h3>Berbagi elektron</h3>
+<p>Terjadi antara <b>dua atom nonlogam</b>. Tidak ada yang melepas atau menerima penuh, elektron dipakai bersama.</p>
+<p>Contoh unsur: <b>H₂, O₂, N₂, Cl₂</b></p>
+<p>Contoh senyawa: <b>H₂O, CO₂, NH₃, CH₄, HCl, C₆H₁₂O₆ (glukosa), C₂H₅OH (etanol)</b></p></div>
+</div>
+<div class="note"><b>Cara cepat menebak:</b> logam + nonlogam → ionik. Nonlogam + nonlogam → kovalen.</div>
+</section>
+
+<section id="bentuk">
+<h2>2. Bagaimana ikatan kovalen terbentuk?</h2>
+<p>Dua atom nonlogam sama-sama ingin menambah elektron, jadi tidak ada yang mau melepas. Jalan keluarnya: <b>berbagi</b>. Pasangan elektron yang dipakai bersama disebut <b>pasangan elektron ikatan (PEI)</b>.</p>
+<ol class="steps">
+<li><b>Tulis konfigurasi elektron</b> tiap atom. Contoh: H = 1s¹ dan Cl = 1s² 2s² 2p⁶ 3s² 3p⁵.</li>
+<li><b>Cari elektron valensi</b> (kulit terluar). H punya 1, Cl punya 7.</li>
+<li><b>Hitung kekurangan</b> menuju duplet/oktet. H kurang 1 elektron, Cl kurang 1 elektron.</li>
+<li><b>Pasangkan elektron</b> yang kurang. H dan Cl masing-masing menyumbang 1 elektron menjadi 1 PEI.</li>
+<li><b>Periksa hasilnya</b>. H punya 2 elektron (duplet), Cl punya 8 (oktet). Keduanya stabil, terbentuk <b>H–Cl</b>.</li>
+</ol>
+<div class="grid2">
+<div class="card b-sun"><h3>Contoh: Cl₂</h3><p>Cl (1s² 2s² 2p⁶ 3s² 3p⁵) kurang 1 elektron untuk mencapai oktet. Dua atom Cl berbagi 1 pasang elektron.</p><div class="cmp"><figure><div id="cl2d"></div><figcaption>Notasi titik</figcaption></figure><figure><div id="cl2s"></div><figcaption>Notasi garis</figcaption></figure></div></div>
+<div class="card b-vio"><h3>Contoh: H₂O</h3><p>O (1s² 2s² 2p⁴) kurang 2, tiap H kurang 1. O berbagi dengan 2 atom H.</p><div class="cmp"><figure><div id="h2od"></div><figcaption>Notasi titik</figcaption></figure><figure><div id="h2os"></div><figcaption>Notasi garis</figcaption></figure></div></div>
+</div>
+<div class="note"><b>Dua cara menulis yang sama artinya:</b> pasangan elektron ikatan (PEI) bisa ditulis sebagai <b>sepasang titik</b> (tosca) atau <b>satu garis</b> (ungu). Pasangan elektron bebas (PEB), yaitu elektron valensi yang tidak dipakai berbagi, selalu ditulis sebagai <b>titik</b> (koral). Pada H₂O, atom O punya 2 PEB.</div>
+</section>
+
+<section id="oktet">
+<h2>3. Kaidah duplet dan oktet</h2>
+<p>Atom berikatan supaya elektron valensinya mencapai susunan seperti gas mulia. Aturan ini disebut kaidah duplet dan oktet.</p>
+<div class="grid2">
+<div class="card b-sun"><span class="tag t-sun">Duplet</span><h3>2 elektron valensi</h3><p>Berlaku untuk atom kecil: <b>H</b> dan <b>He</b>, karena kulit pertama hanya muat 2 elektron.</p></div>
+<div class="card b-teal"><span class="tag t-teal">Oktet</span><h3>8 elektron valensi</h3><p>Berlaku untuk kebanyakan atom lain, misalnya C, N, O, dan Cl.</p></div>
+</div>
+<div class="note"><b>Cara memeriksa:</b> hitung elektron di sekeliling satu atom. Setiap PEI dihitung <b>2 elektron</b> untuk kedua atom yang berikatan. Setiap PEB dihitung 2 elektron untuk atom pemiliknya.</div>
+<h3 style="margin-top:1.4rem">Contoh yang memenuhi kaidah</h3>
+<div class="grid2">
+<div class="card b-vio"><h3>NH₃ (amonia)</h3><p>N (1s² 2s² 2p³) berbagi 3 pasang dengan 3 atom H. Dua elektron N yang tersisa menjadi 1 PEB.</p><div class="cmp" id="g0"></div><p><b>N:</b> 3 PEI + 1 PEB = 8 elektron (oktet). <b>Tiap H:</b> 1 PEI = 2 elektron (duplet).</p></div>
+<div class="card b-vio"><h3>CCl₄ (karbon tetraklorida)</h3><p>C (1s² 2s² 2p²) berbagi 4 pasang dengan 4 atom Cl (1s² 2s² 2p⁶ 3s² 3p⁵). Tiap Cl menyumbang 1 elektron.</p><div class="cmp" id="g1"></div><p><b>C:</b> 4 PEI = 8 elektron (oktet). <b>Tiap Cl:</b> 1 PEI + 3 PEB = 8 elektron (oktet).</p></div>
+</div>
+<h3 style="margin-top:1.4rem">Bagaimana dengan senyawa PCl₅?</h3>
+<div class="card b-coral">
+<h3>PCl₅ (fosforus pentaklorida)</h3>
+<p>P (1s² 2s² 2p⁶ 3s² 3p³) punya 5 elektron valensi, sedangkan tiap Cl (1s² 2s² 2p⁶ 3s² 3p⁵) kurang 1 elektron. Jadi P berbagi 5 pasang elektron dengan 5 atom Cl.</p>
+<div class="cmp" id="g2" style="max-width:640px"></div>
+<p><b>P:</b> 5 PEI = <b>10 elektron</b>, lebih dari oktet. <b>Tiap Cl:</b> 1 PEI + 3 PEB = 8 elektron (oktet).</p>
+<p>Ini <b>tidak salah</b>. PCl₅ adalah senyawa nyata yang dipakai di industri. Atom pusat dari periode 3 ke bawah (seperti P dan S) punya subkulit 3d yang masih kosong, sehingga elektron di sekitarnya bisa lebih dari 8.</p>
+</div>
+<div class="note"><b>Ingat:</b> kaidah oktet adalah pedoman, bukan hukum mutlak. Contoh lain yang melebihi oktet: SF₆ (S punya 12 elektron). Ada juga yang kurang dari oktet, misalnya BF₃ (B punya 6 elektron).</div>
+</section>
+
+<section id="tipe">
+<h2>4. Jenis-jenis ikatan kovalen</h2>
+<p>Klik tombol untuk melihat tiap jenis.</p>
+<div class="tabs" role="tablist" aria-label="Jenis ikatan kovalen">
+<button role="tab" aria-selected="true" aria-controls="p0" id="tb0">Tunggal</button>
+<button role="tab" aria-selected="false" aria-controls="p1" id="tb1">Rangkap dua</button>
+<button role="tab" aria-selected="false" aria-controls="p2" id="tb2">Rangkap tiga</button>
+<button role="tab" aria-selected="false" aria-controls="p3" id="tb3">Koordinasi</button>
+</div>
+<div class="card b-coral panel" id="p0" role="tabpanel" aria-labelledby="tb0">
+<h3>Ikatan kovalen tunggal</h3><p>Berbagi <b>1 pasang</b> elektron.</p>
+<p>Contoh: H₂, Cl₂, HCl. Gambar di bawah memperlihatkan HCl.</p><div class="cmp" id="f0"></div>
+<p>Contoh lain: CH₄ (karbon berbagi 4 pasang, masing-masing tunggal dengan 4 H).</p></div>
+<div class="card b-teal panel" id="p1" role="tabpanel" aria-labelledby="tb1" hidden>
+<h3>Ikatan kovalen rangkap dua</h3><p>Berbagi <b>2 pasang</b> elektron. Atom O (1s² 2s² 2p⁴) kurang 2 elektron, jadi dua atom O berbagi 2 pasang.</p>
+<div class="cmp" id="f1"></div>
+<p>Contoh: O₂ dan CO₂ (karbon dioksida).</p></div>
+<div class="card b-vio panel" id="p2" role="tabpanel" aria-labelledby="tb2" hidden>
+<h3>Ikatan kovalen rangkap tiga</h3><p>Berbagi <b>3 pasang</b> elektron. Atom N (1s² 2s² 2p³) kurang 3 elektron, jadi dua atom N berbagi 3 pasang.</p>
+<div class="cmp" id="f2"></div>
+<p>Contoh: N₂, gas penyusun sekitar 78% udara. Ikatannya sangat kuat sehingga N₂ sulit bereaksi.</p></div>
+<div class="card b-sun panel" id="p3" role="tabpanel" aria-labelledby="tb3" hidden>
+<h3>Ikatan kovalen koordinasi</h3><p>Pasangan elektron yang dipakai bersama <b>berasal dari satu atom saja</b>. Atom lain hanya menyediakan orbital kosong.</p>
+<p class="bondline">NH₃ + H⁺ → NH₄⁺</p><div class="cmp" id="f3"></div>
+<p>N pada NH₃ punya 1 PEB. Ion H⁺ tidak punya elektron. PEB milik N dipakai bersama, terbentuk ikatan N→H. Contoh lain: H₃O⁺.</p></div>
+<div id="lewis" class="card b-vio" style="margin-top:1.6rem">
+<h3>Struktur Lewis: lihat elektronnya</h3>
+<p>Pilih molekul untuk melihat strukturnya. <b>Garis</b> = pasangan elektron ikatan (PEI). <b>Dua titik</b> = pasangan elektron bebas (PEB).</p>
+<div class="tabs lw" id="lwtabs"></div>
+<div id="lwfig" style="max-width:640px"></div>
+<div id="lwinfo" aria-live="polite"></div>
+</div>
+</section>
+
+<section id="nama">
+<h2>5. Rumus kimia dan tata nama</h2>
+<p>Senyawa kovalen biner (dua jenis unsur nonlogam) dinamai dengan aturan berikut:</p>
+<ol class="steps">
+<li>Tulis nama <b>unsur pertama</b> (yang ditulis lebih dulu di rumus).</li>
+<li>Tulis nama <b>unsur kedua</b> dengan akhiran <b>-ida</b>.</li>
+<li>Beri <b>awalan angka</b> sesuai jumlah atom. Awalan <i>mono-</i> tidak dipakai di unsur pertama.</li></ol>
+<div class="pre" aria-label="Awalan angka"><span>1 mono</span><span>2 di</span><span>3 tri</span><span>4 tetra</span><span>5 penta</span><span>6 heksa</span><span>7 hepta</span><span>8 okta</span><span>9 nona</span><span>10 deka</span></div>
+<div class="scroll" style="margin-top:1rem"><table>
+<tr><th>Rumus</th><th>Nama</th></tr>
+<tr><td class="formula">CO</td><td>karbon monoksida</td></tr>
+<tr><td class="formula">CO₂</td><td>karbon dioksida</td></tr>
+<tr><td class="formula">CCl₄</td><td>karbon tetraklorida</td></tr>
+<tr><td class="formula">N₂O₃</td><td>dinitrogen trioksida</td></tr>
+<tr><td class="formula">PCl₅</td><td>fosforus pentaklorida</td></tr>
+<tr><td class="formula">SO₃</td><td>belerang trioksida</td></tr>
+</table></div>
+<div class="note"><b>Nama umum:</b> beberapa senyawa punya nama sehari-hari, yaitu H₂O (air), NH₃ (amonia), CH₄ (metana). Nama ini dihafal, tidak memakai aturan awalan.</div>
+</section>
+
+<section id="sifat">
+<h2>6. Sifat-sifat senyawa kovalen</h2>
+<div class="scroll"><table>
+<tr><th>Sifat</th><th>Senyawa kovalen</th><th>Senyawa ionik (NaCl)</th></tr>
+<tr><td>Wujud</td><td>Gas, cairan, atau padatan lunak</td><td>Padatan keras dan rapuh</td></tr>
+<tr><td>Titik leleh &amp; didih</td><td>Rendah, gaya antarmolekul lemah</td><td>Tinggi</td></tr>
+<tr><td>Hantar listrik</td><td>Umumnya tidak menghantar, tidak ada ion bebas. Pengecualian: yang bereaksi dengan air menghasilkan ion, misalnya HCl</td><td>Menghantar saat lebur atau larut</td></tr>
+<tr><td>Kelarutan</td><td>Polar larut di pelarut polar (gula di air). Nonpolar larut di nonpolar (minyak di bensin)</td><td>Umumnya larut di air</td></tr>
+</table></div>
+<div class="note"><b>Alasannya:</b> senyawa kovalen tersusun dari <b>molekul</b> terpisah. Saat meleleh, yang dipisahkan hanya tarikan lemah antarmolekul, bukan ikatan kovalennya.</div>
+</section>
+
+<section id="kuis">
+<h2>7. Uji pemahamanmu</h2>
+<div id="quiz"></div>
+<p class="score" id="score" aria-live="polite"></p>
+</section>
+</main>
+<footer>Bahan ajar Kimia Kelas 10 · Ikatan Kimia</footer>
+
+<script>
+var tabs=document.querySelectorAll('[role=tab]');
+tabs.forEach(function(t,i){t.addEventListener('click',function(){tabs.forEach(function(x,j){x.setAttribute('aria-selected',i===j);document.getElementById('p'+j).hidden=i!==j})})});
+var Q=[
+["Pasangan unsur yang membentuk ikatan kovalen adalah ...",["Na dan Cl","H dan O","K dan F","Mg dan O"],1,"H dan O sama-sama nonlogam, sehingga berbagi elektron membentuk H₂O."],
+["Berapa pasang elektron yang dipakai bersama dalam molekul N₂?",["1","2","3","4"],2,"N (1s² 2s² 2p³) kurang 3 elektron, jadi dua atom N berbagi 3 pasang: N≡N."],
+["Nama senyawa N₂O₅ adalah ...",["nitrogen oksida","dinitrogen pentoksida","nitrogen pentaoksida","dinitrogen oksida"],1,"Dua atom N diberi awalan di-, lima atom O diberi penta- dan akhiran -ida: dinitrogen pentoksida."],
+["Mengapa senyawa kovalen umumnya bertitik didih rendah?",["Ikatan kovalennya lemah","Gaya antarmolekulnya lemah","Mengandung ion bebas","Elektronnya dilepas"],1,"Saat mendidih, yang diputus adalah tarikan lemah antarmolekul, bukan ikatan kovalen."],
+["Pada NH₄⁺, ikatan N→H terbentuk karena ...",["N melepas elektron","H memberi 2 elektron","pasangan elektron bebas N dipakai bersama","N dan H bertukar elektron"],2,"Itulah ikatan kovalen koordinasi: pasangan elektron berasal dari satu atom (N)."]];
+var done=0,right=0,box=document.getElementById('quiz');
+Q.forEach(function(q,i){
+var d=document.createElement('div');d.className='card q';
+d.innerHTML='<b>'+(i+1)+'. '+q[0]+'</b>';
+var f=document.createElement('p');f.className='fb';
+q[1].forEach(function(o,k){
+var b=document.createElement('button');b.className='opt';b.textContent=o;
+b.onclick=function(){
+if(d.dataset.done)return;d.dataset.done=1;done++;
+var all=d.querySelectorAll('.opt');all[q[2]].classList.add('ok');
+if(k===q[2]){right++;f.textContent='Benar! '+q[3]}else{b.classList.add('no');f.textContent='Belum tepat. '+q[3]}
+if(done===Q.length)document.getElementById('score').textContent='Skormu: '+right+' dari '+Q.length+(right===Q.length?'. Sempurna!':'. Baca ulang bagian yang masih membingungkan, lalu coba lagi.');
+};d.appendChild(b)});
+d.appendChild(f);box.appendChild(d)});
+var M=[
+{n:'H₂',t:'Kovalen tunggal',pei:1,peb:0,note:'Tiap atom H punya 1 elektron valensi. Keduanya berbagi sepasang elektron, sehingga masing-masing memiliki duplet.',a:[['H',100,80,[]],['H',200,80,[]]],b:[[0,1,1]]},
+{n:'Cl₂',t:'Kovalen tunggal',pei:1,peb:6,note:'Cl (1s² 2s² 2p⁶ 3s² 3p⁵) punya 7 elektron valensi. Satu dipakai berbagi, 6 sisanya menjadi 3 PEB di tiap atom. Tiap Cl menjadi oktet.',a:[['Cl',95,80,[90,270,180]],['Cl',205,80,[90,270,0]]],b:[[0,1,1]]},
+{n:'HCl',t:'Kovalen tunggal',pei:1,peb:3,note:'H mencapai duplet, Cl mencapai oktet. Cl menyimpan 3 PEB.',a:[['H',100,80,[]],['Cl',200,80,[90,270,0]]],b:[[0,1,1]]},
+{n:'H₂O',t:'Kovalen tunggal',pei:2,peb:2,note:'O (1s² 2s² 2p⁴) kurang 2 elektron, jadi berbagi dengan 2 atom H. Empat elektron O yang tersisa menjadi 2 PEB, itulah sebabnya molekul air bengkok.',a:[['O',150,50,[135,45]],['H',90,120,[]],['H',210,120,[]]],b:[[0,1,1],[0,2,1]]},
+{n:'NH₃',t:'Kovalen tunggal',pei:3,peb:1,note:'N (1s² 2s² 2p³) kurang 3 elektron, jadi berbagi dengan 3 atom H. Dua elektron sisa menjadi 1 PEB. PEB inilah yang nanti dipakai pada ikatan koordinasi.',a:[['N',150,60,[90]],['H',85,125,[]],['H',150,135,[]],['H',215,125,[]]],b:[[0,1,1],[0,2,1],[0,3,1]]},
+{n:'CH₄',t:'Kovalen tunggal',pei:4,peb:0,note:'C (1s² 2s² 2p²) kurang 4 elektron, jadi berbagi dengan 4 atom H. Tidak ada PEB.',a:[['C',150,80,[]],['H',150,22,[]],['H',150,138,[]],['H',85,80,[]],['H',215,80,[]]],b:[[0,1,1],[0,2,1],[0,3,1],[0,4,1]]},
+{n:'O₂',t:'Kovalen rangkap dua',pei:2,peb:4,note:'O (1s² 2s² 2p⁴) kurang 2 elektron, jadi dua atom O berbagi 2 pasang. Tiap O menyimpan 2 PEB.',a:[['O',105,80,[120,240]],['O',195,80,[60,300]]],b:[[0,1,2]]},
+{n:'CO₂',t:'Kovalen rangkap dua',pei:4,peb:4,note:'C berbagi 2 pasang dengan masing-masing O. Tiap atom mencapai oktet. Bentuknya lurus.',a:[['O',65,80,[120,240]],['C',150,80,[]],['O',235,80,[60,300]]],b:[[0,1,2],[1,2,2]]},
+{n:'N₂',t:'Kovalen rangkap tiga',pei:3,peb:2,note:'N (1s² 2s² 2p³) kurang 3 elektron, jadi dua atom N berbagi 3 pasang. Tiap N menyimpan 1 PEB.',a:[['N',110,80,[180]],['N',190,80,[0]]],b:[[0,1,3]]},
+{n:'NH₄⁺',t:'Kovalen koordinasi',pei:4,peb:0,br:1,note:'NH₃ memberikan PEB-nya kepada ion H⁺ (anak panah N→H). Pasangan elektron ini berasal dari N saja. Setelah terbentuk, keempat ikatan N–H identik.',a:[['N',150,80,[]],['H',150,25,[]],['H',150,135,[]],['H',85,80,[]],['H',215,80,[]]],b:[[0,1,1],[0,2,1],[0,3,1],[0,4,9]]}
+];
+function lewis(m){
+var s='<svg viewBox="'+(m.vb||'0 0 300 160')+'" role="img" aria-label="Struktur Lewis '+m.n+'">';
+if(m.br)s+='<path d="M52 10h-14v140h14M248 10h14v140h-14" fill="none" stroke="var(--mute)" stroke-width="3"/><text x="282" y="32" font-size="22" text-anchor="middle" fill="var(--coral)">+</text>';
+m.b.forEach(function(b){var A=m.a[b[0]],B=m.a[b[1]],dx=B[1]-A[1],dy=B[2]-A[2],L=Math.hypot(dx,dy),ux=dx/L,uy=dy/L,r=18,x1=A[1]+ux*r,y1=A[2]+uy*r,x2=B[1]-ux*r,y2=B[2]-uy*r,n=b[2]===9?1:b[2];
+for(var k=0;k<n;k++){var o=(k-(n-1)/2)*9;s+='<line x1="'+(x1-uy*o)+'" y1="'+(y1+ux*o)+'" x2="'+(x2-uy*o)+'" y2="'+(y2+ux*o)+'" stroke="var(--vio)" stroke-width="4" stroke-linecap="round"/>'}
+if(b[2]===9)s+='<polygon points="'+x2+','+y2+' '+(x2-ux*13-uy*7)+','+(y2-uy*13+ux*7)+' '+(x2-ux*13+uy*7)+','+(y2-uy*13-ux*7)+'" fill="var(--vio)"/>'});
+m.a.forEach(function(a){s+='<text x="'+a[1]+'" y="'+(a[2]+10)+'" font-size="30" text-anchor="middle" fill="var(--ink)">'+a[0]+'</text>';
+a[3].forEach(function(g){var q=g*Math.PI/180,cx=a[1]+Math.cos(q)*28,cy=a[2]-Math.sin(q)*28,px=Math.sin(q)*5,py=Math.cos(q)*5;
+s+='<circle cx="'+(cx+px)+'" cy="'+(cy+py)+'" r="3.4" fill="var(--coral)"/><circle cx="'+(cx-px)+'" cy="'+(cy-py)+'" r="3.4" fill="var(--coral)"/>'})});
+return s+'</svg>'}
+var lt=document.getElementById('lwtabs');
+function pick(i){var m=M[i];
+lt.querySelectorAll('button').forEach(function(x,j){x.setAttribute('aria-pressed',i===j)});
+document.getElementById('lwfig').innerHTML='<div class="cmp">'+both(m)+'</div>';
+document.getElementById('lwinfo').innerHTML='<p><span class="tag t-vio">'+m.n+' · '+m.t+'</span></p><p>PEI: <b>'+m.pei+'</b> pasang &nbsp; PEB: <b>'+m.peb+'</b> pasang</p><p>'+m.note+'</p>'}
+M.forEach(function(m,i){var b=document.createElement('button');b.textContent=m.n;b.onclick=function(){pick(i)};lt.appendChild(b)});
+pick(0);
+function dfig(m){var s=lewis({n:m.n,a:m.a,b:[],br:m.br,vb:m.vb}),d='';
+m.b.forEach(function(b){var A=m.a[b[0]],B=m.a[b[1]],dx=B[1]-A[1],dy=B[2]-A[2],L=Math.hypot(dx,dy),ux=dx/L,uy=dy/L,n=b[2]===9?1:b[2];
+for(var k=0;k<n;k++){var c=(k-(n-1)/2)*13,cx=(A[1]+B[1])/2+ux*c,cy=(A[2]+B[2])/2+uy*c;
+[1,-1].forEach(function(e){d+='<circle cx="'+(cx-uy*5*e)+'" cy="'+(cy+ux*5*e)+'" r="4.2" fill="var(--teal)"/>'})}});
+return s.replace('</svg>',d+'</svg>')}
+function both(m){return '<figure>'+dfig(m)+'<figcaption>'+m.n+': notasi titik</figcaption></figure><figure>'+lewis(m)+'<figcaption>'+m.n+': notasi garis</figcaption></figure>'}
+document.getElementById('f0').innerHTML=both(M[2]);
+document.getElementById('f1').innerHTML=both(M[6])+both(M[7]);
+document.getElementById('f2').innerHTML=both(M[8]);
+document.getElementById('f3').innerHTML=both(M[9]);
+var pc=[['P',150,110,[]]],pb=[];
+for(var i=0;i<5;i++){var g=90+72*i,q=g*Math.PI/180;pc.push(['Cl',150+80*Math.cos(q),110-80*Math.sin(q),[g,g+90,g-90]]);pb.push([0,i+1,1])}
+M.push({n:'CCl₄',vb:'0 0 300 220',a:[['C',150,110,[]],['Cl',150,40,[90,180,0]],['Cl',150,180,[270,180,0]],['Cl',80,110,[90,270,180]],['Cl',220,110,[90,270,0]]],b:[[0,1,1],[0,2,1],[0,3,1],[0,4,1]]},{n:'PCl₅',vb:'0 0 300 220',a:pc,b:pb});
+document.getElementById('g0').innerHTML=both(M[4]);
+document.getElementById('g1').innerHTML=both(M[10]);
+document.getElementById('g2').innerHTML=both(M[11]);
+document.getElementById('cl2d').innerHTML=dfig(M[1]);
+document.getElementById('cl2s').innerHTML=lewis(M[1]);
+document.getElementById('h2od').innerHTML=dfig(M[3]);
+document.getElementById('h2os').innerHTML=lewis(M[3]);
+</script>
+</body>
+</html>
